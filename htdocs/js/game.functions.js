@@ -165,13 +165,26 @@ function clone(obj){
 }
 
 Number.prototype.formatTime = function() {
-  var hours = parseInt(this / 60 / 60);
+  var sec_numb = parseInt(this);
   
-  var minutes = parseInt(this / 60);
-  minutes = minutes < 10 ? '0' + minutes : minutes;
-  var sec = this - (minutes * 60);
-  sec = sec < 10 ? '0' + sec : sec;
-  return hours + ':' + minutes + ':' + sec;
+  if (sec_numb < 0) {
+    return '00:00:00';
+  }
+  
+  var hours = Math.floor(sec_numb / 3600);
+  var minutes = Math.floor((sec_numb - (hours * 3600)) / 60);
+  var seconds = sec_numb - (hours * 3600) - (minutes * 60);
+
+  if (hours < 10) {
+    hours   = "0"+hours;
+  }
+  if (minutes < 10) {
+    minutes = "0"+minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0"+seconds;
+  }
+  return hours + ':' + minutes + ':' + seconds;
 }
 
 Date.prototype.format = function() {
