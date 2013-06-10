@@ -64,7 +64,7 @@ function Game() {
     this.drawEmpty();
     this.populateTimer();
     this.addScore(0);
-    this.updateLevelBar();
+    graphic.updateLevelBar(this.level, this.score, this.maxLevel, this.nextLevel);
     this.updateLevel();          
   }
   
@@ -417,7 +417,7 @@ function Game() {
       $('#answerContainer table').prepend($answerRow);
       
       this.addScore(score);
-      this.updateLevelBar();
+      graphic.updateLevelBar(this.level, this.score, this.maxLevel, this.nextLevel);
       this.updateLevel();
       
       if (this.isPalindrome(word)) {
@@ -490,23 +490,6 @@ function Game() {
     $('#words').text(t.words + ': ' + this.correctAnswers.length);
   }
   
-  this.updateLevelBar = function() {
-    if (this.level >= this.maxLevel) {
-      return false;
-    }
-    
-    $levelBar = $('#level-bar .level-chunk');
-    var maxLevelBarLen = 480;
-    var levelBarLen = this.score / this.level;
-    
-    if (levelBarLen > maxLevelBarLen) {
-      levelBarLen -= maxLevelBarLen;
-      this.nextLevel();
-    }
-
-    $levelBar.animate({width: levelBarLen + 'px'});
-  }
-  
   this.nextLevel = function() {
     if (this.level >= this.maxLevel) {
       return false;
@@ -560,7 +543,7 @@ function Game() {
         this.achievScore += achievement.s;
         var score = achievement.s * this.achievMultiplicator * this.level;
         this.addScore(score);
-        this.updateLevelBar();
+        graphic.updateLevelBar(this.level, this.score, this.maxLevel, this.nextLevel);
         this.updateLevel();
         this.updateWords();
         log('achiev ' + score);
@@ -801,7 +784,7 @@ function Game() {
     this.populateUser();
     
     this.addScore(0);
-    this.updateLevelBar();
+    graphic.updateLevelBar(this.level, this.score, this.maxLevel, this.nextLevel);
     this.updateLevel();
     this.updateWords();
     this.initControls();

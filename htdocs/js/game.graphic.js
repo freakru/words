@@ -29,5 +29,24 @@ function Graphic() {
       $('#answer').css('background-color', oldBackground);
     }, 200);
   }
+
+  this.updateLevelBar = function(level, score, maxLevel, nextLevelCallback) {
+    if (level >= maxLevel) {
+      return false;
+    }
+    
+    $levelBar = $('#level-bar .level-chunk');
+    var maxLevelBarLen = 480;
+    var levelBarLen = score / level;
+    
+    if (levelBarLen > maxLevelBarLen) {
+      levelBarLen -= maxLevelBarLen;
+      if (typeof nextLevelCallback == 'function') {
+        nextLevelCallback();
+      }
+    }
+
+    $levelBar.css({width: levelBarLen + 'px'});
+  }
   
 } 
