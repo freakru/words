@@ -31,7 +31,7 @@ function Game() {
   
   this.isNewGame = function() {
     var strGameState = localStorage.getItem('wordGame');
-    return strGameState == null || strGameState == "";
+    return strGameState == null || strGameState == "" || strGameState == 'null';
   }
   
   this.play = function() {
