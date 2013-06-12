@@ -3,15 +3,9 @@
   padding: 0;
 }
 
-@font-face {
-  font-family: Segoe Script;
-  src: url('../protected/segoesc.ttf') format('truetype'),
-       url('../protected/segoesc.svg') format('svg');
-}
-
 body {
   background: transparent url(../img/paper.jpg);
-  font-family: Segoe Script;
+  font-family: Arial;
   font-size: 15px;
   padding: 10px;
 }
