@@ -17,10 +17,113 @@ header('Content-Type: text/html; charset=utf-8') ?>
   <script src="js/game.request.js"></script>
   <script src="js/game.ready.js"></script>
   
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
   <link rel="stylesheet" href="css/jquery.jgrowl.css" type="text/css"/>
   <link rel="stylesheet" href="css/simplemodal.css" type="text/css"/>
   <link rel="stylesheet" href="css/main.css" type="text/css" />
 </head>
+<body>
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="#">Project name</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form pull-right">
+            <input class="span2" type="text" placeholder="Email">
+            <input class="span2" type="password" placeholder="Password">
+            <button type="submit" class="btn">Sign in</button>
+          </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="hero-unit">
+
+      <div id="bar">
+        <a href="" id="showMenu" title=""></a>
+        <div id="menu">
+          <ul>
+            <li><a id="new" href="#"></a></li>
+            <li><a id="achiev" href="#"></a></li>
+            <li><a id="scores" href="#"></a></li>
+          </ul>
+        </div>
+        <div id="user"></div>
+        <div id="level"></div>
+        <div id="timer"></div>
+        <div id="words"></div>
+        <div id="score"></div>
+        <div class="clear"></div>
+      </div>
+      <div id="level-bar">
+        <div class="level-chunk"></div>
+      </div>
+      
+      <div class="box">
+
+      </div>
+      
+      <div class="form">
+        <input id="answer" type="text" />
+        <a href="#" id="enter"></a>
+        <div class="clear"></div>
+        <span id="possibleScore"></span>
+      </div>
+      
+      <div id="message-container">
+        <div id="message"></div>
+      </div>
+      <div id="answerContainer">
+        <table>
+          <thead>
+            <tr>
+              <td>
+                <a id="sort-a"></a>
+              </td>
+              <td>
+                <a id="sort-l"></a>
+              </td>
+              <td>
+                <a id="sort-s"></a>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <div id="status"></div>
+
+  </div><!-- hero-unit -->
+
+</div><!-- container -->
+
   <div id="modal">
     <label id="username-label" for="username"></label><br />
     <input id="username" type="text" />
@@ -29,60 +132,6 @@ header('Content-Type: text/html; charset=utf-8') ?>
     <a href="#" id="lang-de" data-lang="de" class="lang"></a>
     <a href="#" id="lang-ru" data-lang="ru" class="lang"></a>
   </div>
-  <div id="bar">
-    <a href="" id="showMenu" title=""></a>
-    <div id="menu">
-      <ul>
-        <li><a id="new" href="#"></a></li>
-        <li><a id="achiev" href="#"></a></li>
-        <li><a id="scores" href="#"></a></li>
-      </ul>
-    </div>
-    <div id="user"></div>
-    <div id="level"></div>
-    <div id="timer"></div>
-    <div id="words"></div>
-    <div id="score"></div>
-    <div class="clear"></div>
-  </div>
-  <div id="level-bar">
-    <div class="level-chunk"></div>
-  </div>
-  
-  <div class="box">
-    
-  </div>
-  
-  <div class="form">
-    <input id="answer" type="text" />
-    <a href="#" id="enter"></a>
-    <div class="clear"></div>
-    <span id="possibleScore"></span>
-  </div>
-  
-  <div id="message-container">
-    <div id="message"></div>
-  </div>
-  <div id="answerContainer">
-    <table>
-      <thead>
-        <tr>
-          <td>
-            <a id="sort-a"></a>
-          </td>
-          <td>
-            <a id="sort-l"></a>
-          </td>
-          <td>
-            <a id="sort-s"></a>
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </div>
-  <div id="status"></div>
   
   <div id="win-achievements" class="window draggable">
     <div class="win-header"></div>
@@ -97,7 +146,6 @@ header('Content-Type: text/html; charset=utf-8') ?>
     <div class="clear"></div>
     <div class="win-content"></div>
   </div>
-  
-  
+
 </body>
 </html>
