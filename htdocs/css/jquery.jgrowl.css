@@ -1,6 +1,5 @@
 
 div.jGrowl {
-	padding: 			10px;
 	z-index: 			9999;
 	color: 				#fff;
 	font-size: 			12px;
@@ -15,7 +14,7 @@ div.ie6.top-right {
 	right: 				auto;
 	bottom: 			auto;
 	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
-  	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
 }
 
 div.ie6.top-left {
@@ -81,16 +80,17 @@ div.center div.jGrowl-notification, div.center div.jGrowl-closer {
 }
 
 div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
-	background-color: 		#2C347F;
+	background-color: 		#000;
 	opacity: 				.85;
-    -ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; 
-    filter: 				progid:DXImageTransform.Microsoft.Alpha(Opacity=85); 
+	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; 
+	filter: 				progid:DXImageTransform.Microsoft.Alpha(Opacity=85); 
 	zoom: 					1;
-	width: 					340px;
+	width: 					235px;
 	padding: 				10px;
 	margin-top: 			5px;
 	margin-bottom: 			5px;
-	font-size: 				15px;
+	font-family: 			Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 				1em;
 	text-align: 			left;
 	display: 				none;
 	-moz-border-radius: 	5px;
@@ -101,8 +101,14 @@ div.jGrowl div.jGrowl-notification {
 	min-height: 			40px;
 }
 
+div.jGrowl div.jGrowl-notification,
+div.jGrowl div.jGrowl-closer {
+	margin: 				10px;
+}
+
 div.jGrowl div.jGrowl-notification div.jGrowl-header {
-  color: #FFD100;
+	font-weight: 			bold;
+	font-size:				.85em;
 }
 
 div.jGrowl div.jGrowl-notification div.jGrowl-close {
@@ -127,10 +133,4 @@ div.jGrowl div.jGrowl-closer {
 	div.jGrowl {
 		display: 			none;
 	}
-}
-
-.jGrowl-header{
-  height: 32px;
-  padding-left: 35px;
-  margin: 3px;
 }

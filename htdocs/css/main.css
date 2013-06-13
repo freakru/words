@@ -264,10 +264,12 @@ body {
 
 .achievement .jGrowl-header{
   background: transparent url(../img/achievement.gif) no-repeat left center;
+  padding: 0 20px;
 }
 
 .star .jGrowl-header{
   background: transparent url(../img/star.png) no-repeat left center;
+  padding: 0 20px;
 }
 
 #sort-a, #sort-l, #sort-s {
