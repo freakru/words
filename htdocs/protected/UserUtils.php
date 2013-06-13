@@ -20,7 +20,7 @@ class UserUtils {
   public static function setScore($score) {
     $user = App::getUser();
     if ($user == null) {
-      return;
+      return json_encode(null);
     }
     
     $user->score = $score;

@@ -94,7 +94,7 @@ function Game() {
       $("#answer").trigger(press);
     });
     
-    $('.letter').die().live('click', function() {
+    $('.letter').on('click', function() {
       var $letterElement = $(this);
       var letter = $letterElement.text().firstChar();
       var partWord = $("#answer").val();
@@ -161,17 +161,17 @@ function Game() {
       e.preventDefault();
     });
     
-    $('.close').die().live('click', function(e) {
+    $('.close').on('click', function(e) {
       $(this).parent().hide();
       e.preventDefault();
     });
     
-    $('.add-word').die().live('click', function(e) {
+    $('.add-word').on('click', function(e) {
       thisClass.addWord($('.add-word-container strong').text());
       e.preventDefault();
     });
     
-     $('.add-word-close').die().live('click', function(e) {
+     $('.add-word-close').on('click', function(e) {
       $('#message').fadeOut();
       e.preventDefault();
     });

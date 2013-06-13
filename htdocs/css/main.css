@@ -9,18 +9,6 @@ body {
   font-size: 15px;
   padding: 10px;
 }
-#level, #timer, #score, #words, #user {
-  color: #2c347f;
-  float: left;
-  font-size: 14px;
-  height: 25px;
-  vertical-align: middle;
-  width: 150px;
-}
-
-#level {
-  width: 100px;
-}
 
 #showMenu {
   background: transparent url(../img/asterisk.png) no-repeat center center;

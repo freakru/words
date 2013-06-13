@@ -4,11 +4,11 @@ header('Content-Type: text/html; charset=utf-8') ?>
 <html>
 <head>
   <meta charset="utf-8">
-  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/jquery.jgrowl.js"></script>
-  <script type="text/javascript" src="js/jquery.simplemodal.1.4.1.min.js"></script>
+  <script src="js/lib/jquery-2.0.2.min.js"></script>
+  <script src="js/lib/jquery-ui.min.js"></script>
+  <script src="js/jquery.jgrowl.js"></script>
+  <script src="js/lib/jquery.simplemodal.1.4.4.min.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
   <script src="js/game.functions.js"></script>
   
   <script src="js/game.js"></script>
@@ -32,12 +32,8 @@ header('Content-Type: text/html; charset=utf-8') ?>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="#">Project name</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -50,6 +46,10 @@ header('Content-Type: text/html; charset=utf-8') ?>
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
+            <li><a id="level"></a></li>
+            <li><a id="timer"></a></li>
+            <li><a id="score"></a></li>
+            <li><a id="words"></a></li>
           </ul>
           <form class="navbar-form pull-right">
             <input class="span2" type="text" placeholder="Email">
@@ -75,27 +75,26 @@ header('Content-Type: text/html; charset=utf-8') ?>
           </ul>
         </div>
         <div id="user"></div>
-        <div id="level"></div>
-        <div id="timer"></div>
+        
         <div id="words"></div>
-        <div id="score"></div>
+        
         <div class="clear"></div>
       </div>
       <div id="level-bar">
         <div class="level-chunk"></div>
       </div>
-      
+
       <div class="box">
 
       </div>
-      
+
       <div class="form">
         <input id="answer" type="text" />
         <a href="#" id="enter"></a>
         <div class="clear"></div>
         <span id="possibleScore"></span>
       </div>
-      
+
       <div id="message-container">
         <div id="message"></div>
       </div>
