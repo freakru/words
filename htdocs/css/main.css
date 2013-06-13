@@ -254,10 +254,7 @@ body {
   background-color: #8d99af;
   border: 1px solid #282d41;
   color: #282d41;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 30px;
+  font-size: 40px;
   height: 50px;
   float: left;
   margin-right: 6px;
@@ -269,9 +266,8 @@ body {
 }
 
 .weight {
-  color: #cff;
-  font-size: 9px;
-  font-weight: bold;
+  color: #fff;
+  font-size: 12px;
   position: absolute;
   bottom: 2px;
   right: 2px;
