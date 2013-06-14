@@ -7,7 +7,6 @@ header('Content-Type: text/html; charset=utf-8') ?>
   <script src="js/lib/jquery-2.0.2.min.js"></script>
   <script src="js/lib/jquery-ui.min.js"></script>
   <script src="js/lib/jquery.jgrowl.min.js"></script>
-  <script src="js/lib/jquery.simplemodal.1.4.4.min.js"></script>
   <script src="bootstrap/js/bootstrap.js"></script>
   <script src="js/game.functions.js"></script>
   
@@ -118,14 +117,29 @@ header('Content-Type: text/html; charset=utf-8') ?>
 
 </div><!-- container -->
 
-  <div id="modal">
-    <label id="username-label" for="username"></label><br />
-    <input id="username" type="text" />
-    <input id="username-enter" type="button" value="ok" class="modalClose" />
-    <a href="#" id="lang-en" data-lang="en" class="lang"></a>
-    <a href="#" id="lang-de" data-lang="de" class="lang"></a>
-    <a href="#" id="lang-ru" data-lang="ru" class="lang"></a>
+<a href="#modal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+
+<!-- Modal -->
+<div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
   </div>
+  <div class="modal-body">
+    <p>
+      <label id="username-label" for="username"></label><br />
+      <input id="username" type="text" />
+      <input id="username-enter" type="button" value="ok" class="modalClose" />
+      <a href="#" id="lang-en" data-lang="en" class="lang"></a>
+      <a href="#" id="lang-de" data-lang="de" class="lang"></a>
+      <a href="#" id="lang-ru" data-lang="ru" class="lang"></a>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
   
   <div id="win-achievements" class="window draggable">
     <div class="win-header"></div>

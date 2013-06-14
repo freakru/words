@@ -54,7 +54,7 @@ function Game() {
     log('play begins');
     
     if (this.isNewGame()) {
-      $('#modal').modal({minHeight:100, escClose: false});
+      $('#modal').modal({keyboard: false});
     } else {
       this.populateUser();
     }
