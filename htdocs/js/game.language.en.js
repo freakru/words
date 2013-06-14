@@ -1,7 +1,9 @@
 var t = {
+  error: 'Error',
+  message: 'Message',
   already_used: '{0} already used',
   cannot_make: '{0} unable to make from {1}',
-  unknown_word: 'unknown word {0} ',
+  unknown_word: 'Unknown word {0} ',
   min_word_length: 'minimal word length - {0}',
   min_score: 'minimal score - {0}',
   menu: 'menu',
@@ -15,6 +17,7 @@ var t = {
   words: 'words',
   username: 'name',
   add_word: 'add',
+  word_added: '{0} added',
   hallo: 'hello',
   scores: 'highscore',
   

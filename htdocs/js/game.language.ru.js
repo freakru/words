@@ -1,7 +1,9 @@
 var t = {
+  error: 'Ошибка',
+  message: 'Сообщение',
   already_used: '{0} уже было',
   cannot_make: '{0} нельзя составить из {1}',
-  unknown_word: 'не знаю слово {0} ',
+  unknown_word: 'Не знаю слово {0} ',
   min_word_length: 'минимальная длина слова - {0}',
   min_score: 'минимальная цена слова - {0}',
   menu: 'Меню',
@@ -15,6 +17,7 @@ var t = {
   words: 'Слова',
   username: 'Имя',
   add_word: 'добавить',
+  word_added: '{0} добавлено в словарь',
   hallo: 'Привет',
   scores: 'Таблица рекордов',
   

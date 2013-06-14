@@ -36,9 +36,9 @@ header('Content-Type: text/html; charset=utf-8') ?>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a id ="new" href="#">New</a></li>
+                <li><a id="achiev" href="#">Achievements</a></li>
+                <li><a id="scores" href="#">Scores</a></li>
                 <li class="divider"></li>
                 <li class="nav-header">Nav header</li>
                 <li><a href="#">Separated link</a></li>
@@ -65,14 +65,7 @@ header('Content-Type: text/html; charset=utf-8') ?>
     <div class="hero-unit">
 
       <div id="bar">
-        <a href="" id="showMenu" title=""></a>
-        <div id="menu">
-          <ul>
-            <li><a id="new" href="#"></a></li>
-            <li><a id="achiev" href="#"></a></li>
-            <li><a id="scores" href="#"></a></li>
-          </ul>
-        </div>
+       
       </div>
       <div id="level-bar">
         <div class="level-chunk"></div>
@@ -140,7 +133,7 @@ header('Content-Type: text/html; charset=utf-8') ?>
     </form>
   </div>
   <div class="modal-footer">
-    <button data-t="save" class="btn btn-primary"></button>
+    <button id="username-enter" data-t="save" class="btn btn-primary"></button>
   </div>
 </div>
   

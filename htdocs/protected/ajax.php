@@ -63,6 +63,7 @@
     
     session_unset();
     session_write_close();
+    echo json_encode(null);
     return false;
   }
   

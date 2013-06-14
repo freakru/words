@@ -1,7 +1,9 @@
 var t = {
+  error: 'Fehler',
+  message: 'Hinweis',
   already_used: '{0} gab es schon',
   cannot_make: '{0} kann man nicht aus {1} zusammensetzen',
-  unknown_word: 'unbekanntes Wort {0} ',
+  unknown_word: 'Unbekanntes Wort {0} ',
   min_word_length: 'minimale Länge - {0}',
   min_score: 'minimaler Wortpreis - {0}',
   menu: 'Menü',
@@ -15,6 +17,7 @@ var t = {
   words: 'Worte',
   username: 'Name',
   add_word: 'hinzufügen',
+  word_added: '{0} hinzufügt',
   hallo: 'Hallo',
   scores: 'Bestenliste',
   

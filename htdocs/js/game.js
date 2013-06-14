@@ -171,7 +171,7 @@ function Game() {
       e.preventDefault();
     });
     
-    $('.add-word').on('click', function(e) {
+    $('body').on('click', '.add-word', function(e) {
       thisClass.addWord($('.add-word-container strong').text());
       e.preventDefault();
     });
@@ -650,24 +650,15 @@ function Game() {
   
   
   this.error = function(message) {
-    $('#message')
-      .html(message)
-      .show()
-      .delay(1000)
-      .fadeOut();
+    graphic.message(t.error, message, '');
     return false;
   }
   
   
   this.errorAddWord = function(message) {
-    var addWord = '<div class="add-word-container">'
-      + message
-      + ' <a href="#" class="add-word">' + t.add_word + '</a>'
-      + ' <a href="#" class="add-word-close">x</a>'
-      + '</div>';
-    $('#message')
-      .html(addWord)
-      .show();
+    message = '<div class="add-word-container">' + message + '</div>';
+    message += ' <a href="#" class="add-word">' + t.add_word + '</a>';
+    graphic.message(t.error, message, '', 10000000);
     return false;
   }
   
@@ -678,7 +669,8 @@ function Game() {
     request.get({r: 'dictionary/add-word', word: word}, function(data) {
         if (data.success) {
           game.tryAnswer(data.word);
-          $('#message').fadeOut();
+          $('.jGrowl-close').click();
+          graphic.message(t.message, t.word_added.format(word.strong()), '');
         }
     });
   }
@@ -831,7 +823,7 @@ function Game() {
           game.draw();
           game.populateUser();
           game.save();
-          $.modal.close();
+          $('#modal').modal('hide');
           game.setTimer();
         }
     });

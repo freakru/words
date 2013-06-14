@@ -10,11 +10,15 @@ function Graphic() {
     $window.show();
   }
 
-  self.message = function(header, description, theme) {
+  self.message = function(header, description, theme, duration) {
+    var life = 3000;
+    if (typeof duration != 'undefined') {
+      life = duration;
+    }
     $.jGrowl(description, {
       header: header,
       theme: theme,
-      life: 1000000});
+      life: life});
   }
   
   self.animateAnswer = function() {

@@ -10,8 +10,9 @@ function Request() {
           successCallback.call(this, data);
         } 
       },
-      error: function() {
-        console.log("error");
+      error: function(e, type, message) {
+        console.error(message);
+        graphic.message('Error', message);
       }
     });
   }
