@@ -94,7 +94,7 @@ function Game() {
       $("#answer").trigger(press);
     });
     
-    $('.letter').on('click', function() {
+    $('.box').on('click', '.letter', function() {
       var $letterElement = $(this);
       var letter = $letterElement.text().firstChar();
       var partWord = $("#answer").val();

@@ -74,11 +74,6 @@ header('Content-Type: text/html; charset=utf-8') ?>
             <li><a id="scores" href="#"></a></li>
           </ul>
         </div>
-        <div id="user"></div>
-        
-        <div id="words"></div>
-        
-        <div class="clear"></div>
       </div>
       <div id="level-bar">
         <div class="level-chunk"></div>
