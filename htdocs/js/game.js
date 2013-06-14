@@ -70,6 +70,11 @@ function Game() {
   
   
   this.localize = function() {
+    $('[data-t]').each(function() {
+      var key = $(this).attr('data-t');
+      $(this).text(t[key]);
+    });
+
     $('#showMenu').attr('title', t.menu);
     $('#new').text(t.snew);    
     $('#scores').text(t.scores);    

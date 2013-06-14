@@ -117,27 +117,30 @@ header('Content-Type: text/html; charset=utf-8') ?>
 
 </div><!-- container -->
 
-<a href="#modal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
-
-<!-- Modal -->
 <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Modal header</h3>
+    <h3 data-t="hallo"></h3>
   </div>
   <div class="modal-body">
-    <p>
-      <label id="username-label" for="username"></label><br />
-      <input id="username" type="text" />
-      <input id="username-enter" type="button" value="ok" class="modalClose" />
-      <a href="#" id="lang-en" data-lang="en" class="lang"></a>
-      <a href="#" id="lang-de" data-lang="de" class="lang"></a>
-      <a href="#" id="lang-ru" data-lang="ru" class="lang"></a>
-    </p>
+    <form class="form-horizontal">
+      <div class="control-group">
+        <label id="username-label" class="control-label" for="username">Email</label>
+        <div class="controls">
+          <input type="text" id="username" placeholder="">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <a href="#" id="lang-en" data-lang="en" class="lang"></a>
+          <a href="#" id="lang-de" data-lang="de" class="lang"></a>
+          <a href="#" id="lang-ru" data-lang="ru" class="lang"></a>
+        </div>
+      </div>
+    </form>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
+    <button data-t="save" class="btn btn-primary"></button>
   </div>
 </div>
   
