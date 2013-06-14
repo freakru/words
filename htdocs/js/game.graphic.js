@@ -1,5 +1,7 @@
 function Graphic() {
-  this.getWindow = function($window, header, content) {    
+  var self = this;
+
+  self.getWindow = function($window, header, content) {    
     $('.win-header', $window).html(header);
     $('.win-content', $window)
       .empty()
@@ -7,21 +9,15 @@ function Graphic() {
       .show();
     $window.show();
   }
-  
-  this.animateAchievement = function(a) {
-    var iconName = a.n;
-    if (typeof a.p != 'undefined') {
-      iconName += a.p;
-    }
-    
-    $.jGrowl(a.description, {
-      header: a.header + ' +' + a.s,
-      theme:  'achievement',
-      iconName: iconName,
+
+  self.message = function(header, description, theme) {
+    $.jGrowl(description, {
+      header: header,
+      theme: theme,
       life: 1000000});
   }
   
-  this.animateAnswer = function() {
+  self.animateAnswer = function() {
     var oldBackground = $('#answer').css('background-color');
     var newBackground = '#fff';
     $('#answer').css('background-color', newBackground);
@@ -30,7 +26,7 @@ function Graphic() {
     }, 200);
   }
 
-  this.updateLevelBar = function(level, score, maxLevel, nextLevelCallback) {
+  self.updateLevelBar = function(level, score, maxLevel, nextLevelCallback) {
     if (level >= maxLevel) {
       return false;
     }

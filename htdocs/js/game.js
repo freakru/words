@@ -536,7 +536,7 @@ function Game() {
       
       if (!achievement.isCompleted && fn.apply(this, [word, achievement.p])) {
         
-        graphic.animateAchievement(achievement);
+        graphic.message(achievement.header, achievement.description, 'achievement');
         
         achievement.isCompleted = true;
         achievement.date = new Date();
