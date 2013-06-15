@@ -610,11 +610,6 @@ function Game() {
     $mainContainer.append('<div class="clear" />');
   }
   
-  this.updatePossibleScore = function() {
-    var possibleScore = this.getScore($('#answer').val());
-    $('#possibleScore').text(possibleScore);
-  }
-  
   this.handleEvents = function(e) {
     switch (e.keyCode) {
       /* ENTER */
