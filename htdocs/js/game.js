@@ -257,7 +257,6 @@ function Game() {
       ach.description = description;
       ach.fn = this[ach.n];
       ach.isCompleted = ach.isCompleted || false;
-      ach.date = null;
       
       tmpAchievements[i] = ach;
       this.maxAchievScore += ach.s;

@@ -57,7 +57,7 @@ body {
 }
 
 .win-header {
-  background-color: #999;
+  background-color: #5A3509;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -126,8 +126,7 @@ body {
 
 .ach-item .score {
   float: right;
-  line-height: 2.2;
-  margin-top: -50px;
+  margin-top: -35px;
 }
 
 .ach-item .value {
