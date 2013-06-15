@@ -666,7 +666,7 @@ function Game() {
   this.addWord = function(word) {
     var game = this;
     
-    request.get({r: 'dictionary/add-word', word: word}, function(data) {
+    request.get({r: 'dictionary/add-word', word: word, userId: game.userId}, function(data) {
         if (data.success) {
           game.tryAnswer(data.word);
           $('.jGrowl-close').click();

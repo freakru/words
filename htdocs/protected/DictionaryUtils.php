@@ -15,13 +15,12 @@ class DictionaryUtils {
     return json_encode(array('word' => $word, 'isAllowed' => $isAllowed));
   }
   
-  public static function addWord($word) {
+  public static function addWord($word, $userId) {
     $dao = Database::getInstance();
-    $user = App::getUser();
 
     $dao->insert('userdictionary', array(
       'word' => $word,
-      'user_id' => $user->id,
+      'user_id' => $userId,
       'date_add' => date('Y-m-d H:i:s')
       ));
     

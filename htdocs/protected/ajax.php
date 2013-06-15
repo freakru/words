@@ -71,11 +71,12 @@
   
   if (isset($r) && $r == 'dictionary/add-word') {
     $word = $_REQUEST['word'];
+    $userId = $_REQUEST['userId'];
     
     header('Cache-Control: no-cache, must-revalidate');
     header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
     header('Content-type: application/json');
 
-    echo DictionaryUtils::addWord($word);
+    echo DictionaryUtils::addWord($word, $userId);
     return false;
   }
