@@ -81,12 +81,9 @@ header('Content-Type: text/html; charset=utf-8') ?>
           <button id="enter" class="btn" type="button">Enter</button>
         </div>
       </div>
-
-      <div id="message-container">
-        <div id="message"></div>
-      </div>
+      
       <div id="answerContainer">
-        <table>
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>

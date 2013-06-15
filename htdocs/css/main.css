@@ -40,14 +40,6 @@ body {
   padding: 5px 0;
 }
 
-#message-container {
-  height: 30px;
-}
-
-#message {
-  color: #c20;
-}
-
 .window {
   background-color: #ccc;
   border: 1px solid #282D41;
@@ -186,12 +178,6 @@ body {
 #answerContainer table tr td:nth-child(3) {
   text-align: right;
   width: 45px;
-}
-
-#answerContainer td {
-  color: #2C347F;
-  padding: 3px;
-  border-bottom: 1px solid #2c347e;
 }
 
 .rounded {
