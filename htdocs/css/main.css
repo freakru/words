@@ -152,7 +152,7 @@ body {
   border: 1px solid #282d41;
   height: 5px;
   margin-bottom: 24px;
-  width: 480px;
+  width: 570px;
 }
 
 .level-chunk {
@@ -175,7 +175,7 @@ body {
 }
 
 #answerContainer table {
-  width: 500px;
+  width: 575px;
 }
 
 #answerContainer table tr:nth-child(odd) {
@@ -330,4 +330,19 @@ a.add-word-close {
     margin-left: -14px;
     top: -7px;
     z-index: 10;
+}
+#answer {
+  width: 500px;
+}
+
+#gameContainer {
+    background-color: #EEEEEE;
+    border-radius: 6px 6px 6px 6px;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding: 60px;
+    width: 600px;
 }

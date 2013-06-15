@@ -61,7 +61,7 @@ header('Content-Type: text/html; charset=utf-8') ?>
 
   <div class="container">
 
-    <div class="hero-unit">
+    <div id="gameContainer">
 
       <div id="bar">
        
@@ -89,15 +89,15 @@ header('Content-Type: text/html; charset=utf-8') ?>
         <table>
           <thead>
             <tr>
-              <td>
+              <th>
                 <a id="sort-a"></a>
-              </td>
-              <td>
+              </th>
+              <th>
                 <a id="sort-l"></a>
-              </td>
-              <td>
+              </th>
+              <th>
                 <a id="sort-s"></a>
-              </td>
+              </th>
             </tr>
           </thead>
           <tbody>
