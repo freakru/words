@@ -502,12 +502,13 @@ function Game() {
   }
   
   this.nextLevel = function() {
-    if (this.level >= this.maxLevel) {
+    var self = game;
+    if (self.level >= self.maxLevel) {
       return false;
     }
-    this.level++;
-    this.getMainword();
-    this.draw();
+    self.level++;
+    self.getMainword();
+    self.draw();
   }
   
   this.populateTimer = function() {

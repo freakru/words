@@ -61,6 +61,7 @@ body {
   top: 80px;
   height: 480px;
   width: 480px;
+  z-index: 1000;
 }
 
 .win-header {
@@ -133,7 +134,7 @@ body {
 
 .ach-item .score {
   float: right;
-  line-height: 1.2;
+  line-height: 2.2;
   margin-top: -50px;
 }
 
