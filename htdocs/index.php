@@ -77,6 +77,7 @@ header('Content-Type: text/html; charset=utf-8') ?>
       <div class="form">
         <div class="input-append">
           <input id="answer" class="input-xlarge"type="text">
+          <i class="input-clear icon-remove"></i>
           <button id="enter" class="btn" type="button">Enter</button>
         </div>
       </div>

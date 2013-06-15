@@ -165,6 +165,12 @@ function Game() {
       $('#menu').hide();
       e.preventDefault();
     });
+
+    $('.input-clear').on('click', function(e) {
+      $(this).prev('input').val("").focus();      
+      $('.letter').removeClass('selected');
+      e.preventDefault();
+    });
     
     $('.close').on('click', function(e) {
       $(this).parent().hide();

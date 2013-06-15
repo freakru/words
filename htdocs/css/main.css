@@ -321,3 +321,12 @@ a.add-word-close {
 #lang-ru {
   background: transparent url(../img/ru.png) no-repeat left center;
 }
+
+.input-clear {
+    cursor: pointer;
+    position: relative;
+    left: -6px;
+    margin-left: -14px;
+    top: -7px;
+    z-index: 10;
+}
