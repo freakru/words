@@ -533,8 +533,6 @@ function Game() {
     var len = this.achievements.length;
     for (var i = 0; i < len; i++) {
       var achievement = this.achievements[i];
-            
-      var header = achievement.header + ' +' + achievement.s;
       
       var fn = achievement.fn;
       var regExp = new RegExp(type);
@@ -547,7 +545,8 @@ function Game() {
       
       if (!achievement.isCompleted && fn.apply(this, [word, achievement.p])) {
         
-        graphic.message(achievement.header, achievement.description, 'achievement');
+        var header = achievement.header + ' +' + achievement.s;
+        graphic.message(header, achievement.description, 'achievement');
         
         achievement.isCompleted = true;
         achievement.date = new Date();

@@ -36,7 +36,7 @@ function Graphic() {
     }
     
     $levelBar = $('#level-bar .level-chunk');
-    var maxLevelBarLen = $('#levelbar').width();
+    var maxLevelBarLen = $('#level-bar').width();
     var levelBarLen = score / level;
     
     if (levelBarLen > maxLevelBarLen) {
