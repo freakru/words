@@ -13,7 +13,7 @@ module('updateLevelBar', {
 test( "simple", function() {
   
   var $fixture = $('#qunit-fixture');
-  equal( $( "#level-bar", $fixture ).width(), 480, "level-bar added successfully!" );
+  equal( $( "#level-bar", $fixture ).width(), 570, "level-bar added successfully!" );
 });
  
 test( "level 1", function() {
@@ -44,7 +44,7 @@ test( "level 1 score 490", function() {
 
   graphic.updateLevelBar(1, 490, 50);
 
-  equal( $bar.width(), 10, "right width is 10" );
+  equal( $bar.width(), 490, "right width is 490" );
 });
 
 test( "level 2 score 680", function() {

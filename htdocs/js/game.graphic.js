@@ -36,12 +36,12 @@ function Graphic() {
     }
     
     $levelBar = $('#level-bar .level-chunk');
-    var maxLevelBarLen = 480;
+    var maxLevelBarLen = $('#levelbar').width();
     var levelBarLen = score / level;
     
     if (levelBarLen > maxLevelBarLen) {
       levelBarLen -= maxLevelBarLen;
-      if (typeof nextLevelCallback == 'function') {
+      if (typeof nextLevelCallback === 'function') {
         nextLevelCallback();
       }
     }

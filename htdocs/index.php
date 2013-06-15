@@ -66,8 +66,8 @@ header('Content-Type: text/html; charset=utf-8') ?>
       <div id="bar">
        
       </div>
-      <div id="level-bar">
-        <div class="level-chunk"></div>
+      <div id="level-bar" class="progress">
+        <div class="level-chunk bar"></div>
       </div>
 
       <div class="box">
