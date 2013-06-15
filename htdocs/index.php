@@ -18,7 +18,6 @@ header('Content-Type: text/html; charset=utf-8') ?>
   
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
   <link rel="stylesheet" href="css/jquery.jgrowl.css" type="text/css"/>
-  <link rel="stylesheet" href="css/simplemodal.css" type="text/css"/>
   <link rel="stylesheet" href="css/main.css" type="text/css" />
 </head>
 <body>
@@ -76,10 +75,10 @@ header('Content-Type: text/html; charset=utf-8') ?>
       </div>
 
       <div class="form">
-        <input id="answer" type="text" />
-        <a href="#" id="enter"></a>
-        <div class="clear"></div>
-        <span id="possibleScore"></span>
+        <div class="input-append">
+          <input id="answer" class="input-xlarge"type="text">
+          <button id="enter" class="btn" type="button">Enter</button>
+        </div>
       </div>
 
       <div id="message-container">

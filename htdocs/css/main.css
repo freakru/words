@@ -165,28 +165,6 @@ body {
   border-left: none;
 }
 
-
-#answer {
-  background-color: #daebec;
-  border: 1px solid #333;
-  float: left;
-  font-size: 25px;
-  width: 480px;;
-}
-
-#enter {
-  background: transparent url(../img/enter.png) no-repeat center center;
-  display: block;
-  float: left;
-  height: 32px;
-  outline: 0;
-  width: 32px;
-}
-
-#possibleScore {
-  color: #6b7996;
-  font-size: 20px;
-}
 #answerLetters {
   display: none;
 }
