@@ -1,4 +1,4 @@
-function Game() {
+function Game(lang) {
   this.mainword = '';
   this.timer = 0;
   this.score = 0;

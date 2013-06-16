@@ -105,12 +105,14 @@ Game.prototype.note7 = function() {
 Game.prototype.rainbow = function() {
   var letters = ['к','о','ж','з','г','с','ф'];
   var countLetters = 0;
+  lettersLoop:
   for (var i = 0; i < letters.length; i++) {
     var letter = letters[i];
     for (var j = 0; j < this.correctAnswers.length; j++) {
       var answer = this.correctAnswers[j].w;
       if (answer.firstChar() == letter) {
         countLetters++;
+        continue lettersLoop;
       }
     }
   }

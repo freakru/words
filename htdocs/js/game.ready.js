@@ -13,7 +13,7 @@ var minScore = 5;
 var lang = 'en';//navigator.language;
 var debug = true;
 
-var game = new Game();
+var game = new Game(lang);
 var graphic = new Graphic();
 var request = new Request();
 
