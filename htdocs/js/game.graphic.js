@@ -2,12 +2,12 @@ function Graphic() {
   var self = this;
 
   self.getWindow = function($window, header, content) {    
-    $('.win-header', $window).html(header);
+    $('.modal-header h3', $window).html(header);
     $('.win-content', $window)
       .empty()
       .append(content)
       .show();
-    $window.show();
+    $window.modal({keyboard: false});
   }
 
   self.message = function(header, description, theme, duration) {
