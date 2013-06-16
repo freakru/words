@@ -1,4 +1,4 @@
-var mainwords = {'ru':'авантюрист',//инструмент
+var mainwords = {'ru':'авантюрист,активность,инструмент',//инструмент
 'en':'nationalization',
 'de':'durchsichtlichkeit,reißverschluss'
 }
@@ -124,4 +124,5 @@ var letterFrequency = {
 $(function() {
   $('.draggable').draggable();
   game.play();
+  $('#answer').focus();
 });
