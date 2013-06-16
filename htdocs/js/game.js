@@ -8,7 +8,6 @@ function Game() {
   this.level = 1;
   this.achievScore = 0;
   this.maxAchievScore = 0;
-  this.achievMultiplicator = 5;
   
   this.rareLetters = [];
 
@@ -550,9 +549,6 @@ function Game() {
         
         achievement.isCompleted = true;
         achievement.date = new Date();
-        this.achievScore += achievement.s;
-        var score = achievement.s * this.achievMultiplicator * this.level;
-        this.addScore(score);
         graphic.updateLevelBar(this.level, this.score, this.maxLevel, this.nextLevel);
         this.updateLevel();
         this.updateWords();

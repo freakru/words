@@ -1,4 +1,4 @@
-var mainwords = {'ru':'инструмент',
+var mainwords = {'ru':'авантюрист',//инструмент
 'en':'nationalization',
 'de':'durchsichtlichkeit,reißverschluss'
 }

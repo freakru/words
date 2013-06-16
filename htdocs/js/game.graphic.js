@@ -34,13 +34,14 @@ function Graphic() {
     if (level >= maxLevel) {
       return false;
     }
-    
+       
     $levelBar = $('#level-bar .level-chunk');
     var maxLevelBarLen = $('#level-bar').width();
-    var levelBarLen = score / level;
+    var scorePerLevel = 120;
+    var scoreMuliplicator = maxLevelBarLen / scorePerLevel;
+    var levelBarLen = score * scoreMuliplicator % maxLevelBarLen;
     
-    if (levelBarLen > maxLevelBarLen) {
-      levelBarLen -= maxLevelBarLen;
+    if (score > scorePerLevel * level) {
       if (typeof nextLevelCallback === 'function') {
         nextLevelCallback();
       }
