@@ -330,3 +330,10 @@ a.add-word-close {
     padding: 60px;
     width: 600px;
 }
+
+.notransition {
+    -webkit-transition: width 0s ease 0s !important;
+     -moz-transition: width 0s ease 0s !important;
+       -o-transition: width 0s ease 0s !important;
+          transition: width 0s ease 0s !important;
+}

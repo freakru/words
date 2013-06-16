@@ -44,10 +44,14 @@ function Graphic() {
     if (score > scorePerLevel * level) {
       if (typeof nextLevelCallback === 'function') {
         nextLevelCallback();
+        $levelBar.addClass('notransition');
       }
     }
 
     $levelBar.css({width: levelBarLen + 'px'});
+    var t=setTimeout(function(){
+      $levelBar.removeClass('notransition');
+    }, 700);
   }
   
 } 
