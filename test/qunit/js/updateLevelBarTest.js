@@ -33,7 +33,7 @@ test( "level 1 score 100", function() {
 
   graphic.updateLevelBar(1, 100, 50);
 
-  equal( $bar.width(), 100, "right width is 100" );
+  equal( $bar.width(), 475, "right width is 475" );
 });
 
 
@@ -44,7 +44,7 @@ test( "level 1 score 490", function() {
 
   graphic.updateLevelBar(1, 490, 50);
 
-  equal( $bar.width(), 490, "right width is 490" );
+  equal( $bar.width(), 48, "right width is 48" );
 });
 
 test( "level 2 score 680", function() {
@@ -54,5 +54,5 @@ test( "level 2 score 680", function() {
 
   graphic.updateLevelBar(2, 680, 50);
 
-  equal( $bar.width(), 340, "right width is 340" );
+  equal( $bar.width(), 380, "right width is 380" );
 });
