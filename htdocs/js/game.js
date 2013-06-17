@@ -553,6 +553,7 @@ function Game(lang) {
         this.updateLevel();
         this.updateWords();
         log('achiev ' + score);
+        this.achievScore += achievement.s;
       }
     }
   }
