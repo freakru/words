@@ -324,7 +324,7 @@ function Game(lang) {
     }
 
     if (word.length < 5) {
-      return;
+      return false;
     }
     
     var isAnagram = true;
